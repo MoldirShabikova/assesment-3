@@ -9,19 +9,12 @@ module.exports = {
       
         res.status(200).send(randomCompliment);
     },
+    getFortune: (req, res) =>{
+        const fortunes = ["All will go well with your new project!", "A pleasant surprise is waiting for you!", "A lifetime of happiness lies ahead of you", "A truly rich life contains love and art in abundance", "One can never fill another’s shoes, rather he must outgrow the old shoes!", "You are almost there!"];
 
-    getFortune: (req, res) => {
-        const fortunes = ['Failure is the chance to do better next time.', 'A fresh start will put you on your way.', 'A new perspective will come with the new year.', 'A pleasant surprise is waiting for you', 'A truly rich life contains love and art in abundance'];
-      
-        // choose random compliment
         let randomIndex = Math.floor(Math.random() * fortunes.length);
-        let randomFortune = fortunes[randomIndex];
-      
-        res.status(200).send(randomFortune);
+        let randomFortune = fortunes[randomIndex]
+
+        res.status(200).send(randomFortune)
     }
-
-    
-
-
-
 }
