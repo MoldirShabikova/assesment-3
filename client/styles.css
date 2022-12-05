@@ -103,3 +103,12 @@ img{
     margin-bottom: 10px;
 }
 
+.btns-container {
+  width: 12%; 
+  display: inline-block;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+.btns-container > button {
+  width: 20px;
+}

@@ -94,11 +94,11 @@ function createCard(item) {
           <p><b>Author:</b> ${author}</p>
          
           <div class='btns-container'>
-          <button onclick="updateBook('${id}', 'minus')">-</button>
-          <h1><b>Rating: </b>${rating}</h1>
-          <button onclick="updateBook('${id}', 'plus')">+</button>
+          <button class='btns-container' onclick="updateBook('${id}', 'minus')">-</button>
+          <h1 ><b>Rating: </b>${rating}</h1>
+          <button class='btns-container' onclick="updateBook('${id}', 'plus')">+</button>
       </div> 
-      <h5 class="quote"><b>Best Quote: </b>${bookQuote}</h5>
+      <h3 class="quote"><b>Best Quote: </b>${bookQuote}</h3>
 
      
           <button class='delete-btn' onclick="deleteBook('${id}')">remove</button>
