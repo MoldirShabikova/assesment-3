@@ -3,7 +3,14 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
+  .btns{
+    display: flex; 
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(101, 68, 139)
+
+  }
   body {
     background-color: snow;
   }
@@ -24,7 +31,7 @@
   form {
     width: 350px;
     height: 350px;
-    background-color: darkslategray;
+    background-color: rgb(101, 68, 139);
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -33,13 +40,20 @@
     margin: 30px;
   }
   
-  button {
-    background-color: #232323;
-    width: 75px;
-    height: 25px;
-    color: turquoise;
+  form input{
+    margin:5px;
+    padding: 5px;
+    border:1px solid teal;
+    border-radius: 5px;
+}
+  button, .delete-btn {
+    background-color: #e4e4e4;
+    width: 90px;
+    height: 45px;
+    color: rgb(141, 105, 207);
     border: none;
     margin: 5px;
+    border-radius: 10px;
   }
   
   input[type='text'] {
@@ -50,3 +64,42 @@
     color: #232323;
     background-color: snow;
   }
+.container button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+  #books-container{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .book-cover-image {
+    width: 300px; 
+    height: 300px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .card {
+    width: 300px;
+    height: 500px;
+    border:1px solid rgb(162, 132, 222);
+    background-color:rgb(141, 105, 207);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20px;
+    padding:15px;
+    text-align:center;
+}
+
+img{
+    width: 180px;
+   height:200px;
+    margin-bottom: 10px;
+}
+

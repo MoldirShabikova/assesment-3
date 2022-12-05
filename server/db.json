@@ -3,7 +3,7 @@
       "id": 1,
       "title": "The 7 Habits of Highly Effective People",
       "author": "Stephen Covey,",
-  
+        "rating": 3,
       "bookCoverImg": "https://upload.wikimedia.org/wikipedia/en/a/a2/The_7_Habits_of_Highly_Effective_People.jpg",
       "bookQuote": "Sow a thought, reap an action; sow an action, reap a habit; sow a habit, reap a character; sow a character, reap a destiny."
     },
@@ -11,6 +11,7 @@
       "id": 2,
       "title": "Think and Grow Rich",
       "author": "Napoleon Hill ",
+      "rating": 2,
       "bookCoverImg": "https://target.scene7.com/is/image/Target/GUEST_b40d55f1-715f-4ad7-bfca-ae826fbef8b6?wid=488&hei=488&fmt=pjpeg",
       "bookQuote": "A quitter never wins - and - a winner never quits."
     },
@@ -18,7 +19,7 @@
       "id": 3,
       "title": "The Power of Positive Thinking",
       "author": "Norman Vincent Peale",
-
+      "rating": 5,
       "bookCoverImg": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSJ-JYdJ2BTGsp1me1QAgrCG0LPZti-GsHaHmZmj-nzwLI20Cp1",
       "bookQuote": "The secret of a better and more successful life is to cast out those old, dead, unhealthy thoughts"
     }

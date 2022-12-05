@@ -66,12 +66,14 @@ function handleSubmit(e) {
   let bookAuthor = document.querySelector("#author");
   let bookCoverImg = document.querySelector("#img");
   let bookQuote = document.querySelector("#quote");
+  let bookRating = document.querySelector("#rating");
 
   let newBook = {
     title: bookTitle.value,
     author: bookAuthor.value,
     bookCoverImg: bookCoverImg.value,
     bookQuote: bookQuote.value,
+    rating:bookRating.value
   };
   createBook(newBook);
 
@@ -79,23 +81,28 @@ function handleSubmit(e) {
   bookAuthor.value = "";
   bookCoverImg.value = "";
   bookQuote.value = "";
+  bookRating.value =""
 }
 
 
 function createCard(item) {
-    let { title, author, bookCoverImg, bookQuote,id } = item;
+    let { title, author, bookCoverImg, bookQuote,id, rating } = item;
     const el = `
       <section class='card'>
-          <img src="${bookCoverImg}" alt='${title}'/>
+          <img src="${bookCoverImg}" alt='${title} class="book-cover-image"/>
           <h4>${title}</h4>
           <p><b>Author:</b> ${author}</p>
-          <div class='btn-wrapper'>
-       
-          </div>
-          <div class='btn-wrapper'>
-              <h5><b>Best Quote: </b>${bookQuote}</h5>
-              <button class='delete-btn' onclick="deleteBook('${id}')">remove</button>
-          </div>
+         
+          <div class='btns-container'>
+          <button onclick="updateBook('${id}', 'minus')">-</button>
+          <h1><b>Rating: </b>${rating}</h1>
+          <button onclick="updateBook('${id}', 'plus')">+</button>
+      </div> 
+      <h5 class="quote"><b>Best Quote: </b>${bookQuote}</h5>
+
+     
+          <button class='delete-btn' onclick="deleteBook('${id}')">remove</button>
+
       </section>`;
     bookContainer.innerHTML += el;
   }

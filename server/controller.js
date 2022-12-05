@@ -25,13 +25,14 @@ module.exports = {
         res.status(200).send(books)
     },
     createBook: (req, res)=> {
-        const {title, author,bookCoverImg, bookQuote} = req.body;
+        const {title, author,bookCoverImg, bookQuote, rating} = req.body;
             let newBook = {
                 id: globalId,
                 title,
                 author,
                 bookCoverImg,
-                bookQuote
+                bookQuote,
+                rating
             }
             books.push(newBook)
             res.status(200).send(books)
@@ -47,14 +48,21 @@ module.exports = {
         let {id} = req.params;
         let {type} = req.body;
         let index= books.findIndex((book)=> book.id===+id)
-        if(type==='minus'){
-            +books[index].price--
+
+        if (books[index].rating === 5 && type === 'plus') {
+            res.status(400).send('cannot go above 5')
+        } else if (books[index].rating === 0 && type === 'minus') {
+            res.status(400).send('cannot go below 0')
+        }else if(type==='minus'){
+            +books[index].rating--
             res.status(200).send(books)
         } else if (type==='plus'){
-            +books[index].price++
+            +books[index].rating++
             res.status(200).send(books)
         } else {
             res.sendStatus(400)
         }
+            
+        
     }
 }
